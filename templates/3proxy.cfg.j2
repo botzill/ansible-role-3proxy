@@ -34,3 +34,7 @@ socks -p{{ proxy_socks_port }} {{ proxy_socks_options }}
 {% if proxy_http %}
 proxy -p{{ proxy_http_port }} {{ proxy_http_options }}
 {% endif %}
+
+{% if proxy_admin_http %}
+admin -p{{ proxy_admin_http_port }}
+{% endif %}

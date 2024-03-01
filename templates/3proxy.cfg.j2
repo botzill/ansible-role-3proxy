@@ -36,7 +36,7 @@ proxy -p{{ proxy_http_port }} {{ proxy_http_options }}
 {% endif %}
 
 {% for proxy_info in proxy_http_list %}
-proxy -p{{ proxy_info.port }} {{ proxy_info.http_options }}
+proxy -p{{ proxy_info.port | default(proxy_http_port) }} {{ proxy_info.http_options }}
 {% endfor %}
 
 {% if proxy_admin_http %}

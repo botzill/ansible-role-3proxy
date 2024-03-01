@@ -49,6 +49,7 @@ proxy_socks: False
 proxy_socks_port: 1080
 proxy_socks_options: ""
 proxy_http: False
+proxy_http_all: False
 proxy_http_port: 3128
 proxy_http_options: ""
 proxy_admin_http: False

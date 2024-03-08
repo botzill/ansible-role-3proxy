@@ -41,6 +41,12 @@ proxy -p{{ proxy_info.port | default(proxy_http_port) }} {{ proxy_info.http_opti
 {% endfor %}
 {% endif %}
 
+{% if proxy_socks_all %}
+{% for proxy_info in proxy_socks_all %}
+socks -p{{ proxy_info.port | default(proxy_socks_port) }} {{ proxy_info.socks_options }}
+{% endfor %}
+{% endif %}
+
 {% if proxy_admin_http %}
 admin -p{{ proxy_admin_http_port }}
 {% endif %}

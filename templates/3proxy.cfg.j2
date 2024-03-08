@@ -42,7 +42,7 @@ proxy -p{{ proxy_info.port | default(proxy_http_port) }} {{ proxy_info.http_opti
 {% endif %}
 
 {% if proxy_socks_all %}
-{% for proxy_info in proxy_socks_all %}
+{% for proxy_info in proxy_socks_list %}
 socks -p{{ proxy_info.port | default(proxy_socks_port) }} {{ proxy_info.socks_options }}
 {% endfor %}
 {% endif %}

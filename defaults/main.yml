@@ -42,6 +42,7 @@ proxy_auth: "none"
 proxy_nserver: []
 proxy_nserver6: []
 proxy_http_list: []
+proxy_socks_list: []
 proxy_nscache: 65536
 proxy_maxconn: 100
 

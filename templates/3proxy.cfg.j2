@@ -9,6 +9,13 @@ logformat "{{ proxy_logformat }}"
 {% if proxy_allow | length > 0 %}
 allow {{ proxy_allow }}
 {% endif %}
+
+{% if ip_allow_list | length > 0 %}
+{% for ip_allow in ip_allow_list %}
+allow {{ ip_allow }}
+{% endfor %}
+{% endif %}
+
 {% if proxy_deny | length > 0 %}
 deny {{ proxy_deny }}
 {% endif %}

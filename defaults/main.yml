@@ -37,6 +37,7 @@ proxy_daemon: True
 proxy_log: "/var/log/3proxy/proxy.log"
 proxy_logformat: "%Y-%m-%d %H:%M:%S %I %O %U"
 proxy_allow: "*"
+ip_allow_list: []
 proxy_deny: ""
 proxy_auth: "none"
 proxy_nserver: []

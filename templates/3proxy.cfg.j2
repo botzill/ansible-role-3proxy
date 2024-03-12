@@ -6,6 +6,8 @@ setgid {{ proxy_user_gid.stdout }}
 log {{ proxy_log }}
 logformat "{{ proxy_logformat }}"
 
+auth {{ proxy_auth }}
+
 {% if proxy_allow | length > 0 %}
 allow {{ proxy_allow }}
 {% endif %}
@@ -22,7 +24,6 @@ deny {{ proxy_deny }}
 
 maxconn {{ proxy_maxconn }}
 
-auth {{ proxy_auth }}
 {% if proxy_users | length > 0 %}
 users ${{ proxy_config_path }}/{{ proxy_service_name }}.auth
 {% endif %}

@@ -6,7 +6,7 @@ setgid {{ proxy_user_gid.stdout }}
 log {{ proxy_log }}
 logformat "{{ proxy_logformat }}"
 
-{% if proxy_auth_allow | length > 0 %}
+{% if proxy_auth_allow %}
 auth {{ proxy_auth }}
 {% endif %}
 
